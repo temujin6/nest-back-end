@@ -28,12 +28,11 @@ export default function Home() {
   // Post request
   const handleCreatePost = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/users", {
+      await axios.post("http://localhost:4000/users", {
         name,
         email,
         password,
       });
-      const newPost = response.data;
 
       setName("");
       setPassword("");
